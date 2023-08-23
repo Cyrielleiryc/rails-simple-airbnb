@@ -1,0 +1,19 @@
+<h1>All our flats (<%= @flats.size %>)</h1>
+<div class="d-flex flex-wrap">
+  <% @flats.each do |flat| %>
+    <div class="card m-2" style="width: 18rem;">
+      <img src="https://images.unsplash.com/photo-1614649024145-7f847b1c803f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.address %></p>
+        <p class="card-text">
+          <i class="fa-solid fa-user-group"></i> <%= flat.number_of_guests %>
+          <%= "  " %><i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night %>
+        </p>
+      </div>
+      <div class="card-body">
+        <%= link_to "More info", flat_path(flat) %>
+      </div>
+    </div>
+  <% end %>
+</div>
