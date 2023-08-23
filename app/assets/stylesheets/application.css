@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+.image-show {
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: top;
+}
+
+.info {
+  position: absolute;
+  top: 400px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  width: 80%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
